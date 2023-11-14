@@ -1,0 +1,104 @@
+{% extends "index.html" %}
+{% load static%}
+{% block content%}
+    <section class="w3mid-gap"></section>
+    <!--/Banner-Start-->
+    <!--/inner-page-->
+    <div class="inner-banner py-5">
+        <section class="w3l-breadcrumb text-left py-sm-5 ">
+            <div class="container">
+                <div class="w3breadcrumb-gids">
+                    <div class="w3breadcrumb-left text-left">
+                        <h2 class="inner-w3-title">
+                            Signup </h2>
+                    </div>
+                    <div class="w3breadcrumb-right">
+                        <ul class="breadcrumbs-custom-path">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="active"><span class="fas fa-angle-double-right mx-2"></span> Signup </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <!--//inner-page-->
+	<div style="margin: 8px auto; display: block; text-align:center;">
+        {%if form.errors %}
+        <div class="form-wrapv">
+            
+            <strong>{{form.errors}}          <i class="fa-solid fa-bug" style="color: #c91313;"></i></strong>
+            
+        </div>
+        {% endif %}
+
+<!---728x90--->
+
+ 
+</div>
+    <section class="w3l-forml-main py-5">
+        <div class="form-hnyv-sec py-sm-5 py-3">
+            <!--form-stars-here-->
+            
+            <div class="form-wrapv">
+
+                <h2>Create an Account</h2>
+                <form action="" method="post" method="POST">
+
+                    {% csrf_token %}
+                    <div class="form-sub-w3">
+                        {{form.username}}
+                        <div class="icon-w3">
+                            <span class="fas fa-user" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <div class="form-sub-w3">
+                        {{form.email}}
+                        <div class="icon-w3">
+                            <span class="" aria-hidden="true"><i class="fa-solid fa-envelope"></i></span>
+                        </div>
+                    </div>
+                    <div class="form-sub-w3">
+                        {{form.password1}}
+                        <div class="icon-w3">
+                            <span class="" aria-hidden="true"><i class="fa-solid fa-lock"></i></span>
+                        </div>
+                    </div>
+                    <div class="form-sub-w3">
+                        {{form.password2}}
+                        <div class="icon-w3">
+                            <span class="" aria-hidden="true"><i class="fa-solid fa-key"></i></span>
+                        </div>
+                    </div>
+                    <!--<div class="form-sub-w3">
+                        <input type="text" name="Username" placeholder="Username " required="" />
+                        <div class="icon-w3">
+                            <span class="fas fa-user" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <div class="form-sub-w3">
+                        <input type="password" name="Password" placeholder="Password" required="" />
+                        <div class="icon-w3">
+                            <span class="fas fa-unlock-alt" aria-hidden="true"></span>
+                        </div>
+                    </div>-->
+                    <div class="">
+                        <p class="forgot-w3ls">Already have an account?<a class href="{% url 'userauths:sign-in' %}"> Login</a></p>
+                    </div>
+                    <div class="submit-button text-center">
+                        <button type="submit" class="btn btn-style btn-primary">Submit & Register </button>
+
+                    </div> 
+                </form>
+
+            </div>
+            <!--//form-ends-here-->
+        </div>
+        <!-- //coming -->
+    </section>
+	<div style="margin: 8px auto; display: block; text-align:center;">
+    </div>
+
+    
+{% endblock content%}
